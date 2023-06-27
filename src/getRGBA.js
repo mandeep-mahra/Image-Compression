@@ -1,7 +1,7 @@
 const { createCanvas, Image, getImageData} = require('canvas')
 
 const img = new Image();
-img.src = "../images/random-dice.jpg"
+img.src = "../images/test.jpeg"
 var canvas = createCanvas(img.width, img.height);
 const context = canvas.getContext('2d')
 context.drawImage(img, 0, 0);
@@ -23,4 +23,4 @@ for(var i = 0; i<(img.height); i++){
     }
 }
 
-module.exports = {red, green, blue, alpha};
+module.exports = {red, green, blue, alpha, width, height};

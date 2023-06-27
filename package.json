@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.11.2",
-    "jimp": "^0.22.8"
+    "jimp": "^0.22.8",
+    "pca-js": "^1.0.2",
+    "sharp": "^0.32.1"
   }
 }
