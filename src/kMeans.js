@@ -1,7 +1,7 @@
 const pixels = require("./getRGBA");
 const convert = require("./matrixToImage")
 
-const K = 40; // number of clusters
+const K = 100; // number of clusters
 
 function arrayToMatrix(array, width ,height){
     var matrix  = [];
@@ -21,8 +21,8 @@ function getRandomPixels(matrix){
     b = matrix[0].length;
     let randomPixels = [];
     for(let i=0; i<K; i++){
-        let x = Math.floor(Math.random()*(l+1));
-        let y = Math.floor(Math.random()*(b+1));
+        let x = Math.floor(Math.random()*(l));
+        let y = Math.floor(Math.random()*(b));
         randomPixels.push([matrix[x][y], 1]);
     }
     return randomPixels;
