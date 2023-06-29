@@ -42,7 +42,6 @@ var gMatrix  = arrayToMatrix(pixels.green, pixels.width, pixels.height);
 var bMatrix  = arrayToMatrix(pixels.blue, pixels.width, pixels.height);
 
 subsampling(rMatrix);
-subsampling(gMatrix);
-subsampling(bMatrix);
+
 
 convert.toImage(rMatrix, gMatrix, bMatrix);
