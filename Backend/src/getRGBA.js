@@ -1,7 +1,7 @@
 const { createCanvas, Image, getImageData} = require('canvas')
 
 const img = new Image();
-img.src = "../images/random-dice.jpg"
+img.src = "../images/sample.jpg"
 var canvas = createCanvas(img.width, img.height);
 const context = canvas.getContext('2d')
 context.drawImage(img, 0, 0);

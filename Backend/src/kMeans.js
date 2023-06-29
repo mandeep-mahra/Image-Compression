@@ -1,7 +1,7 @@
 const pixels = require("./getRGBA");
 const convert = require("./matrixToImage")
 
-const K = 100; // number of clusters
+const K = 64; // number of clusters
 
 function arrayToMatrix(array, width ,height){
     var matrix  = [];
