@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto+Slab:wght@600&display=swap');
+
+body{
+    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto Slab', serif;
+}
+.drop{
+    border: 5px solid blue;
+    width: 100vh;
+    height: 50vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.chooseFileButton{
+    border: none;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2vh;
+}
