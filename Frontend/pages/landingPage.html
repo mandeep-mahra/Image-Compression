@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../landingPage.css">
+    <title>Document</title>
+</head>
+<body align = "center">
+    <div class="container">
+        <div class="logo">
+            <h1>Image Compressor</h1>
+        </div>
+        <div class="importImage">
+            <label for="img" >
+                <div class="fileSelect">
+                    Select an Image
+                </div>
+            </label>
+            <input 
+                type="file" 
+                id = "img" 
+                name="img" 
+                accept="image/*" 
+                class = "imageInput"
+                onchange="getImage(this);"
+            >
+        </div>
+        <br>
+        <div class="imageComp">
+            <div class="displayImage">
+                Image is loading....
+            </div>
+            <div class="nextButtonDiv">
+                <button class="nextButton">Next</button>
+            </div>
+        </div>
+    </div>  
+    <script src = "../getFile.js"></script>  
+</body>
+</html>

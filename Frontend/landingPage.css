@@ -14,9 +14,62 @@ body{
     justify-content: center;
     flex-direction: column;
 }
-.chooseFileButton{
+.imageInput{
+    display: none;
     border: none;
+    
+}
+.fileSelect{
+    display : inline-block;
     font-family: 'EB Garamond', serif;
     font-family: 'Roboto Slab', serif;
     font-size: 2vh;
+    margin-top: 2%;
+    width : 20vh;
+    background-color: aqua;
+    border: none;
+    padding : 1%;
+    border-radius: 2vh;
 }
+.fileSelect, button:hover{
+    background-color: #00f5f5;
+}
+.fileSelect, button:active{
+    background-color: #00e5e5;
+}
+
+.displayImage{
+    display: none;
+    justify-content: center;
+    width:auto;
+    height : 40vh;
+}
+.nextButtonDiv{
+    display: block;
+}
+button{
+    display : none;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2vh;
+    margin-top: 2%;
+    width : 20vh;
+    background-color: aqua;
+    border: none;
+    padding : 1%;
+    border-radius: 2vh;
+}
+
+.imageComp{
+    display: inline-block;
+    border-radius: 2vh;
+    width: auto;
+    background-color: #a1a1a1;
+    padding: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+
+
