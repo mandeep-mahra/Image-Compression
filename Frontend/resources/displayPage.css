@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.display{
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    width: 25vw;
+    height: 50vh;
+    background-color: #8f8f8f;
+    border-radius: 5px;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.imagesContainer{
+    margin-top: 5%;
+    display: flex;
+    gap : 10vh;
+}
+.originalCover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgTitle{
+    text-align: center;
+}

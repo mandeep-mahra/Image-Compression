@@ -4,14 +4,11 @@ body{
     font-family: 'EB Garamond', serif;
     font-family: 'Roboto Slab', serif;
 }
-.drop{
-    border: 5px solid blue;
-    width: 100vh;
-    height: 50vh;
-}
+
 .container{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .imageInput{
@@ -28,8 +25,9 @@ body{
     width : 20vh;
     background-color: aqua;
     border: none;
-    padding : 1%;
+    padding : 10%;
     border-radius: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .fileSelect, button:hover{
     background-color: #00f5f5;
@@ -56,12 +54,13 @@ button{
     width : 20vh;
     background-color: aqua;
     border: none;
-    padding : 1%;
+    padding : 5%;
     border-radius: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .imageComp{
-    display: inline-block;
+    display: none;
     border-radius: 2vh;
     width: auto;
     background-color: #a1a1a1;

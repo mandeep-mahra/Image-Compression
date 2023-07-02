@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="landingPage.css">
-    <link rel="stylesheet" href="displayPage.css">
+    <link rel="stylesheet" href="../resources/landingPage.css">
+    <link rel="stylesheet" href="../resources/displayPage.css">
     <title>Document</title>
 </head>
 <body>
-    We are on new page
+    <div class="container">
+        <div class="logo">
+            <h1>Image Compressor</h1>
+        </div>
+        <div class="imagesContainer">
+            <div class="originlCover dispContent">
+                <div class="imgTitle">
+                    Original Image
+                </div>
+                <div class="originalImage display">
+                    
+                </div>
+            </div>
+            <div class="KMeansCover dispContent">
+                <div class="imgTitle">
+                    K-Means Image
+                </div>
+                <div class="KMeans display"></div>
+            </div>
+            <div class="ChromaSSCover dispContent">
+                <div class="imgTitle">
+                    Chroma subsampling Image
+                </div>
+                <div class="ChromaSS display"></div>
+            </div>
+        </div>    
+    </div>
+
+    <script src = "../resources/loadUploadedImage.js"></script>
 </body>
 </html>
