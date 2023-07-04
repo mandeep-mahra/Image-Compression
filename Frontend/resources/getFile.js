@@ -6,7 +6,7 @@ var output = new Image();
 async function getImage(image){
     var outputImage = image.files[0];
     output = outputImage;
-    sessionStorage.setItem('image', outputImage);
+   
     console.log(outputImage);
     const img = document.createElement('img');
     img.src = URL.createObjectURL(outputImage);
@@ -18,20 +18,24 @@ async function getImage(image){
     nextButton.style.display = 'inline-block';
     imageComp.style.display = 'inline-block';
     container.appendChild(img);
+
     sessionStorage.setItem('inputImage', img.src);
+    var sendImage = new Image();
+    sendImage.src = URL.createObjectURL(outputImage);
+    sendImage = outputImage;
     sessionStorage.setItem('imageSize', image.files[0].size);
+    const reader = new FileReader();
+    console.log(image.files[0].size);
+    reader.onload = function(event) {
+        const base64Image = event.target.result;
+        sessionStorage.setItem("image", base64Image);
+        
+    };
+    reader.readAsDataURL(outputImage);
 }
 
 function nextPage(){
-    fetch('http://localhost:5000/upload', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({output})
-    }).then(() => {
-        console.log(output);
-    });  
+    
     container.style.display = 'none'; 
     nextButton.style.display = 'none';
     imageComp.style.display = 'none';

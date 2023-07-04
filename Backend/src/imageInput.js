@@ -10,9 +10,16 @@ app.use(express.json());
 
 
 app.post('/upload', (req, res) => {
-    const image = req.body.image;
-    console.log("weeheee");
-    console.log(image);
+    var image = req.body.image;
+    var cut = 0;
+    for(var i =0; i<50;i++){
+        if(image[i] == ','){
+            cut = i;
+            break;
+        }
+    }
+    image = image.substring(cut+1)
+    fs.writeFileSync("../input/image.jpg", image, "base64");
 });
 app.get('/', (req, res) => {
     console.log("testing");
