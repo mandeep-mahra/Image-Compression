@@ -22,3 +22,4 @@ fetch('http://localhost:5000/upload', {
 .then((response) => {
     console.log("image sent");
 })
+

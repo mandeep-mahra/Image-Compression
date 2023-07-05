@@ -1,6 +1,6 @@
 const sharp = require('sharp');
 
-function toImage(rMatrix, gMatrix, bMatrix){
+function toImage(rMatrix, gMatrix, bMatrix, path){
   const rgbMatrix = [];
   let temp = [];
   for(var i=0; i<rMatrix.length; i++){
@@ -21,7 +21,7 @@ function toImage(rMatrix, gMatrix, bMatrix){
     }
   });
 
-  image.toFile('../output/output.jpg', (err) => {
+  image.toFile(path, (err) => {
     if (err) {
       console.error('Error saving image:', err);
     } else {

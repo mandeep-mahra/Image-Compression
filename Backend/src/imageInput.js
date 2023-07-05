@@ -3,11 +3,10 @@ const app = express();
 const fs = require('fs');
 const axios = require('axios');
 const cors = require('cors');
+const generate = require("./executeAll");
 
 app.use(cors());
 app.use(express.json());
-
-
 
 app.post('/upload', (req, res) => {
     var image = req.body.image;
@@ -20,7 +19,13 @@ app.post('/upload', (req, res) => {
     }
     image = image.substring(cut+1)
     fs.writeFileSync("../input/image.jpg", image, "base64");
+    generate.execute();
 });
+
+app.get('/subsample', (req, res) => {
+    res = "hello";
+});
+
 app.get('/', (req, res) => {
     console.log("testing");
 });
@@ -28,3 +33,4 @@ app.get('/', (req, res) => {
 app.listen(5000, ()=>{
     console.log("listning to port 5000");
 });
+
