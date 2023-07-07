@@ -4,7 +4,8 @@ var nextButton = document.querySelector(".nextButton");
 var imageComp = document.querySelector(".imageComp");
 var output = new Image();
 sessionStorage.clear();
-async function getImage(image){
+
+function getImage(image){
     var outputImage = image.files[0];
     output = outputImage;
    

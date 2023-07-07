@@ -23,7 +23,10 @@ app.post('/upload', (req, res) => {
 });
 
 app.get('/subsample', (req, res) => {
-    res = "hello";
+    res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/output/chromaSS.jpg");
+});
+app.get('/kmeans', (req, res) => {
+    res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/output/kMeans.jpg");
 });
 
 app.get('/', (req, res) => {

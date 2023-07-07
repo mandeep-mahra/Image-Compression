@@ -30,3 +30,7 @@
 .imgTitle{
     text-align: center;
 }
+.menubar{
+    position : absolute;
+    bottom: 0%;
+}

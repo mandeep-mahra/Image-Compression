@@ -4,7 +4,7 @@ const pixels = require("./getRGBA.js");
 const e = require("express");
 
 function execute(){
-    Chroma.ChromaSS(1,2); // channels, samplesize
+    Chroma.ChromaSS(10,1); // samplesize, channels
     means.kMeans(64, 3);
 }
 execute();

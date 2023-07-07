@@ -1,6 +1,7 @@
 function ChromaSS(sampleValue, numChannel){    
-    const { createCanvas, Image, getImageData} = require('canvas');
+
     const convert = require("./matrixToImage");
+    const { createCanvas, Image, getImageData} = require('canvas');
 
     function arrayToMatrix(array, width ,height){
         var matrix  = [];
@@ -35,7 +36,7 @@ function ChromaSS(sampleValue, numChannel){
             }
         }
     }
-
+    
     const img = new Image();
     img.src = "../input/image.jpg";
     var canvas = createCanvas(img.width, img.height);

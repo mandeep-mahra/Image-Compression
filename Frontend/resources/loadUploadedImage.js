@@ -1,5 +1,6 @@
+import refreshKMeans from "./loadKmeansimage.js";
+import refreshChroma from "./loadChoramaSS.js";
 var flag = 0;
-
 var originalImage = document.querySelector(".originalImage");
 const image = sessionStorage.getItem("inputImage");
 console.log(image);
@@ -23,3 +24,9 @@ fetch('http://localhost:5000/upload', {
     console.log("image sent");
 })
 
+function run(){
+    refreshKMeans();
+    refreshChroma();
+} 
+
+setTimeout(run, 1000);
