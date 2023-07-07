@@ -20,6 +20,8 @@ app.post('/upload', (req, res) => {
     image = image.substring(cut+1)
     fs.writeFileSync("../input/image.jpg", image, "base64");
     generate.execute();
+
+    res.send("ok");
 });
 
 app.get('/subsample', (req, res) => {
@@ -27,6 +29,9 @@ app.get('/subsample', (req, res) => {
 });
 app.get('/kmeans', (req, res) => {
     res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/output/kMeans.jpg");
+});
+app.get('/original', (req, res) => {
+    res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/input/image.jpg");
 });
 
 app.get('/', (req, res) => {

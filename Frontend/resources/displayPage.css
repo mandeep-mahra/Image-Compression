@@ -29,8 +29,16 @@
 }
 .imgTitle{
     text-align: center;
+    font-size: 3vh;
 }
 .menubar{
-    position : absolute;
+    display: flex;
+    position : relative;
+    justify-content:space-evenly;
     bottom: 0%;
+}
+
+.download{
+    align-items :end;
+    cursor: pointer;
 }
