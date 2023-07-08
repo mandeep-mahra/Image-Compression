@@ -1,4 +1,4 @@
-function ChromaSS(sampleValue, numChannel){    
+async function ChromaSS(sampleValue, numChannel){    
 
     const convert = require("./matrixToImage");
     const { createCanvas, Image, getImageData} = require('canvas');

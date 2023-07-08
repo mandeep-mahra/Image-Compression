@@ -1,4 +1,4 @@
-function kMeans(K, numChannel){
+async function kMeans(K, numChannel){
     const convert = require("./matrixToImage");
     const { createCanvas, Image, getImageData} = require('canvas');
     function arrayToMatrix(array, width ,height){

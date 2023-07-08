@@ -1,11 +1,9 @@
 const Chroma = require("./chromaSubsampling.js");
 const means = require("./kMeans.js")
-const pixels = require("./getRGBA.js");
 
-
-function execute(){
-    Chroma.ChromaSS(4,1); // samplesize, channels
-    means.kMeans(64, 3);
+function execute(k, ss, kChannels, cChannels){
+    Chroma.ChromaSS(ss, cChannels); // samplesize, channels
+    means.kMeans(k, kChannels);
 }
 
 module.exports = {execute};

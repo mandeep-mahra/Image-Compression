@@ -12,7 +12,13 @@ async function run(){
         headers: {
         'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ image: base64Image })
+        body: JSON.stringify({ 
+            image: base64Image,
+            k : 64,
+            ss : 4,
+            kChannels : 3, 
+            cChannels : 2, 
+        })
     });
     
     refreshOriginal();

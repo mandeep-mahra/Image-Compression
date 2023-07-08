@@ -5,7 +5,7 @@ const cors = require('cors');
 const generate = require("./executeAll");
 
 app.use(cors());
-app.use(express.json({ limit: '100mb'}));
+app.use(express.json({ limit: '50mb'}));
 
 app.post('/upload', (req, res) => {
     var image = req.body.image;
@@ -18,7 +18,7 @@ app.post('/upload', (req, res) => {
     }
     image = image.substring(cut+1)
     fs.writeFileSync("../input/image.jpg", image, "base64");
-    generate.execute();
+    generate.execute(req.k, req.ss, req.kChannels, req.cChannels);
     res.send("ok");
 });
 
