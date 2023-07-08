@@ -1,4 +1,4 @@
-export default function refreshKMeans(){
+export default async function refreshKMeans(){
     fetch('http://localhost:5000/kmeans')
     .then(res => res.blob())
     .then(res =>{
@@ -12,6 +12,6 @@ export default function refreshKMeans(){
         img.style.paddingTop = '5%';
         kImage.appendChild(img);
         const kmeansSize = document.querySelector(".kmeansSize");
-        kmeansSize.innerHTML = "Size " + (res.size/1000).toFixed(2) + " kb";
+        kmeansSize.innerHTML = "Size " + (res.size/1000).toFixed(2) + " kB";
     })
 }

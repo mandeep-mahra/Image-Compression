@@ -1,4 +1,4 @@
-export default function refreshOriginal(){
+export default async function refreshOriginal(){
     fetch('http://localhost:5000/original')
     .then(res => res.blob())
     .then(res =>{
@@ -10,7 +10,7 @@ export default function refreshOriginal(){
         img.style.maxWidth = '95%';
         img.style.paddingTop = '5%';
         const originalSize = document.querySelector(".originalsize");
-        originalSize.innerHTML = "Size " + (res.size/1000).toFixed(2) + " kb";
+        originalSize.innerHTML = "Size " + (res.size/1000).toFixed(2) + " kB";
         originalImage.appendChild(img);
         
     })

@@ -3,9 +3,10 @@ var container = document.querySelector(".displayImage");
 var nextButton = document.querySelector(".nextButton");
 var imageComp = document.querySelector(".imageComp");
 var output = new Image();
-sessionStorage.clear();
+
 
 function getImage(image){
+    sessionStorage.clear();
     var outputImage = image.files[0];
     output = outputImage;
    

@@ -1,4 +1,4 @@
-export default function refreshChroma(){
+export default async function refreshChroma(){
     fetch('http://localhost:5000/subsample')
     .then(res => res.blob())
     .then(res =>{
@@ -8,11 +8,12 @@ export default function refreshChroma(){
         img.src = imageURL;
         img.className = "chromaImage";
         const chromaSize = document.querySelector(".chromaSize");
-        chromaSize.innerHTML = "Size " + (res.size/1000).toFixed(2) + " kb";
+        chromaSize.innerHTML = "Size " + (res.size/1000).toFixed(2) + " kB";
         img.style.maxHeight = '80%';
         img.style.maxWidth = '95%';
         img.style.paddingTop = '5%';
-        chromaImage.appendChild(img);
+        chromaImage.append(img);
+        console.log(img);
     })
 }
 

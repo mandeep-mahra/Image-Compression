@@ -1,12 +1,11 @@
 const express  = require('express');
 const app = express();
 const fs = require('fs');
-const axios = require('axios');
 const cors = require('cors');
 const generate = require("./executeAll");
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '100mb'}));
 
 app.post('/upload', (req, res) => {
     var image = req.body.image;
@@ -20,17 +19,19 @@ app.post('/upload', (req, res) => {
     image = image.substring(cut+1)
     fs.writeFileSync("../input/image.jpg", image, "base64");
     generate.execute();
-
     res.send("ok");
 });
 
 app.get('/subsample', (req, res) => {
+    res.setHeader('Content-Type', 'image/jpg');
     res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/output/chromaSS.jpg");
 });
 app.get('/kmeans', (req, res) => {
+    res.setHeader('Content-Type', 'image/jpg');
     res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/output/kMeans.jpg");
 });
 app.get('/original', (req, res) => {
+    res.setHeader('Content-Type', 'image/jpg');
     res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/input/image.jpg");
 });
 
