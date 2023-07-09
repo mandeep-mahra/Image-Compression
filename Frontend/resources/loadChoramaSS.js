@@ -13,7 +13,6 @@ export default async function refreshChroma(){
         img.style.maxWidth = '95%';
         img.style.paddingTop = '5%';
         chromaImage.append(img);
-        console.log(img);
     })
 }
 

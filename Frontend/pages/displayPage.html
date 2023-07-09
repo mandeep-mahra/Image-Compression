@@ -10,7 +10,10 @@
 <body>
     <div class="container">
         <div class="logo">
-            <h1>Image Compressor</h1>    
+            <h1>Image Compressor</h1>
+            <div class="settings">
+                <img class = "gear" src="../resources/icons/gear.png" alt="settings">
+            </div>   
         </div>
         <div class="imagesContainer">
             <div class="originlCover dispContent">
@@ -52,8 +55,14 @@
             Loading...
         </div>
     </div>
+    <div class="settingsPrompt">
+        <div class="close">
+            <img class = "backButton" src="../resources/icons/close.png" alt="back">
+        </div>
+    </div>
 
     <script type = "module" src = "../resources/loadUploadedImage.js"></script>
     <script type = "module" src = "../resources/manageDownload.js"></script>
+    <script type = "module" src = "../resources/manageClick.js"></script>
 </body>
 </html>

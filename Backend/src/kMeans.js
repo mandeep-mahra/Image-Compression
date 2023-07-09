@@ -99,4 +99,5 @@ async function kMeans(K, numChannel){
     convert.toImage(rMatrix, gMatrix, bMatrix, path);
 }    
 
+
 module.exports = {kMeans};

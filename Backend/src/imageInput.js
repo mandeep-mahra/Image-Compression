@@ -18,7 +18,7 @@ app.post('/upload', (req, res) => {
     }
     image = image.substring(cut+1)
     fs.writeFileSync("../input/image.jpg", image, "base64");
-    generate.execute(req.k, req.ss, req.kChannels, req.cChannels);
+    generate.execute(req.body.k, req.body.ss, req.body.kChannels, req.body.cChannels);
     res.send("ok");
 });
 
