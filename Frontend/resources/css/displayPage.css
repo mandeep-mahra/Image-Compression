@@ -52,6 +52,7 @@ body{
 }
 
 .mask{
+    display: inline-block;
     position:absolute;
     top : 0%;
     left: 0%;
@@ -81,4 +82,53 @@ body{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: #30d5c8;
     
+}
+.settings{
+    position: absolute;
+    top: 2vh;
+    right: 4%;
+}
+.gear{
+    width: 3vw;
+    position: inherit;
+    cursor: pointer;
+}
+.gear:hover, .backButton:hover, .home:hover{
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.settingsPrompt{
+    display: none;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top:20%;
+    margin: auto;
+    height: 55vh;
+    width: 50vw;
+    background-color: #ffffff;
+    border-radius: 2vh;
+}
+
+.close{
+    color: #000000;
+    text-align: right;
+    cursor: pointer;
+}
+.backButton{
+    width: 2.5vw;
+    position: inherit;
+    cursor: pointer;
+    margin : 2%;
+}
+.back{
+    position: absolute;
+    top: 1.5vh;
+    left: 1%;
+}
+.home{
+    width: 4vw;
+    position: inherit;
+    cursor: pointer;
 }

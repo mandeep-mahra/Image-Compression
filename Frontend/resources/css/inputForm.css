@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto+Slab:wght@400&display=swap');
+
+.valuesInput{
+    position:absolute;
+    top: 5%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    width: 70%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+
+}
+.field{
+    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 10%;
+    height: 4vh;
+    width: 5vw;
+    font-size: 3vh;
+}
+.labels{
+   font-family: 'EB Garamond', serif;
+   font-family: 'Roboto Slab', serif;
+   font-size: 2vh;
+}
+td{
+    text-align: left;
+    font-size: 3vh;
+}
+.submitButton{
+    display: block;
+    bottom: 5%;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5vh;
+    margin-top: 10%;
+    width: 10vw;
+    padding: 1%;
+    border-radius: 1vh;
+    border: none;
+    background-color: #30d5c8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.submitButton:hover{
+    box-shadow: none;
+}

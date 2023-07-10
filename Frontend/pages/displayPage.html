@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../resources/landingPage.css">
-    <link rel="stylesheet" href="../resources/displayPage.css">
+    <link rel="stylesheet" href="../resources/css/landingPage.css">
+    <link rel="stylesheet" href="../resources/css/displayPage.css">
+    <link rel="stylesheet" href="../resources/css/inputForm.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <h1>Image Compressor</h1>    
+            <div class="back">
+                <img class = "home" src="../resources/icons/home.png" alt="home">
+            </div> 
+            <h1>Image Compressor</h1>
+            <div class="settings">
+                <img class = "gear" src="../resources/icons/gear.png" alt="settings">
+            </div>   
         </div>
         <div class="imagesContainer">
             <div class="originlCover dispContent">
@@ -52,8 +59,96 @@
             Loading...
         </div>
     </div>
+    <div class="settingsPrompt">
+        <div class="close">
+            <img class = "backButton" src="../resources/icons/close.png" alt="back">
+            <form class = "valuesInput">
+                <table>
+                    <tr>
+                        <td>K-Means</td>
+                    </tr>
+                    <tr>
+                        <div class="kvalue inputField">
+                            <td>
+                                <label class = "labels">Number of Clusters (k) </label>
+                            </td>
+                            <td>
+                                <input 
+                                    class = "kField field" 
+                                    type="number" 
+                                    value = "64" 
+                                    required="required"
+                                    min = "1"
+
+                                >
+                            </td>    
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="kChannel inputField">
+                            <td>
+                                <label class = "labels">Number of Channels </label>
+                            </td><td>
+                                <input 
+                                    class = "kcField field" 
+                                    type="number" 
+                                    value = "3" 
+                                    required="required"
+                                    min = "1"
+                                    max = "3"
+                                >
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td>Chroma Subsampling</td>
+                    </tr>
+                    <tr>
+                        <div class="Subvalue inputField">
+                            <td>
+                                <label class = "labels" >Subsample Size</label>
+                            </td>
+                            <td>
+                                <input 
+                                    class = "sField field" 
+                                    type="number" 
+                                    value = "2" 
+                                    required="required"
+                                    min = "1"
+
+                                >
+                            </td>
+                        </div>
+                    </tr>  
+                    <tr> 
+                        <div class="ssChannel inputField">
+                            <td>
+                                <label class = "labels" >Number of Channels</label>
+                            </td>
+                            <td>
+                                <input 
+                                    class = "scField field" 
+                                    type="number" 
+                                    value = "1" 
+                                    required="required"
+                                    min = "1"
+                                    max = "3"
+                                >
+                            </td>
+                        </div>
+                    </tr>
+                <table> 
+            </form>
+            <button class = "submitButton">Submit</button>
+        </div>
+        
+    </div>
 
     <script type = "module" src = "../resources/loadUploadedImage.js"></script>
     <script type = "module" src = "../resources/manageDownload.js"></script>
+    <script type = "module" src = "../resources/manageClick.js"></script>
 </body>
 </html>
