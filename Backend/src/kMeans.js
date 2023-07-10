@@ -91,10 +91,10 @@ async function kMeans(K, numChannel){
     var gMatrix  = arrayToMatrix(green, width, height);
     var bMatrix  = arrayToMatrix(blue, width, height);
 
-    changeToClosest(rMatrix);
-    changeToClosest(gMatrix);
-    changeToClosest(bMatrix);
-
+    var matrices = [rMatrix, gMatrix, bMatrix];
+    for(var i =0; i<numChannel ; i++)
+        changeToClosest(matrices[i]);
+    
     const path = "../output/kMeans.jpg";
     convert.toImage(rMatrix, gMatrix, bMatrix, path);
 }    

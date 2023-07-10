@@ -38,7 +38,6 @@ function getImage(image){
 }
 
 function nextPage(){
-    
     container.style.display = 'none'; 
     nextButton.style.display = 'none';
     imageComp.style.display = 'none';

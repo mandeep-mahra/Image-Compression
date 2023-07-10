@@ -52,6 +52,7 @@ body{
 }
 
 .mask{
+    display: inline-block;
     position:absolute;
     top : 0%;
     left: 0%;
@@ -92,7 +93,7 @@ body{
     position: inherit;
     cursor: pointer;
 }
-.gear:hover, .backButton:hover{
+.gear:hover, .backButton:hover, .home:hover{
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -104,7 +105,7 @@ body{
     right: 0%;
     top:20%;
     margin: auto;
-    height: 50vh;
+    height: 55vh;
     width: 50vw;
     background-color: #ffffff;
     border-radius: 2vh;
@@ -120,4 +121,14 @@ body{
     position: inherit;
     cursor: pointer;
     margin : 2%;
+}
+.back{
+    position: absolute;
+    top: 1.5vh;
+    left: 1%;
+}
+.home{
+    width: 4vw;
+    position: inherit;
+    cursor: pointer;
 }
