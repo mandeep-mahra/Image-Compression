@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
+        os: [windows-latest, ubuntu-latest, macos-latest, macos-12, macos-latest-xl, macos-12-xl, ubuntu-20.04, ubuntu-22.04, windows-2022]
         node-version: [15.x, 16.x, 17.x, 18.x, 19.x, 20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
