@@ -38,7 +38,7 @@ To run this project locally, please follow these steps:
 2. Navigate to the project directory:
 
     ```bash
-    cd your-repo
+    cd Image-Compression
 
 3. Install the dependencies:
 
