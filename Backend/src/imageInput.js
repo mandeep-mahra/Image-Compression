@@ -1,5 +1,6 @@
 const express  = require('express');
 const app = express();
+const path = require('path');
 const fs = require('fs');
 const cors = require('cors');
 const generate = require("./executeAll");
@@ -22,16 +23,22 @@ app.post('/upload', (req, res) => {
     res.send("ok");
 });
 
+var currentDirectory = process.cwd();
+const parentDirectory = path.resolve(currentDirectory, '..');
+
 app.get('/subsample', (req, res) => {
     res.setHeader('Content-Type', 'image/jpg');
+    res.sendFile(path.resolve(parentDirectory, 'output', 'chromaSS.jpg'));
     res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/output/chromaSS.jpg");
 });
 app.get('/kmeans', (req, res) => {
     res.setHeader('Content-Type', 'image/jpg');
+    res.sendFile(path.resolve(parentDirectory, 'output', 'kMeans.jpg'));
     res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/output/kMeans.jpg");
 });
 app.get('/original', (req, res) => {
     res.setHeader('Content-Type', 'image/jpg');
+    res.sendFile(path.resolve(parentDirectory, 'input', 'image.jpg'));
     res.sendFile("/home/mandeep/Documents/1231/Image-Compression/Backend/input/image.jpg");
 });
 
