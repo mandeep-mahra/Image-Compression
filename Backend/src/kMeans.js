@@ -1,7 +1,4 @@
-async function kMeans(K, numChannel){
-    const convert = require("./matrixToImage");
-    const { createCanvas, Image, getImageData} = require('canvas');
-    function arrayToMatrix(array, width ,height){
+function arrayToMatrix(array, width ,height){
         var matrix  = [];
         var temp = [];
         for(var i=0; i<=(height * width); i++){
@@ -12,7 +9,11 @@ async function kMeans(K, numChannel){
             temp.push(array[i]);   
         }
         return matrix;
-    }
+}
+
+async function kMeans(K, numChannel){
+    const convert = require("./matrixToImage");
+    const { createCanvas, Image, getImageData} = require('canvas');
 
     function getRandomPixels(matrix){
         l = matrix.length;
@@ -100,4 +101,4 @@ async function kMeans(K, numChannel){
 }    
 
 
-module.exports = {kMeans};
+module.exports = {kMeans, arrayToMatrix};
