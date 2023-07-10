@@ -1,3 +1,4 @@
+[![Node.js CI](https://github.com/mandeep-mahra/Image-Compression/actions/workflows/node.js.yml/badge.svg)](https://github.com/mandeep-mahra/Image-Compression/actions/workflows/node.js.yml)
 # Image Compression and Comparison using K-Means and Chroma Subsampling
 
 This repository contains a project that aims to compress and compare images using K-means clustering and chroma subsampling. The project utilizes Node.js for the backend, HTML, CSS, and JavaScript for the frontend, and Express for the controllers.
