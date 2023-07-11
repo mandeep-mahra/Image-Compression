@@ -10,7 +10,7 @@ function arrayToMatrix(array, width ,height){
         }
         return matrix;
 }
-function getRandomPixels(matrix){
+function getRandomPixels(matrix, K){
     l = matrix.length;
     b = matrix[0].length;
     let randomPixels = [];
@@ -22,8 +22,8 @@ function getRandomPixels(matrix){
     return randomPixels;
 }
 
-function changeToClosest(matrix){
-    let clusters = getRandomPixels(matrix);
+function changeToClosest(matrix,K){
+    let clusters = getRandomPixels(matrix,K);
     //Moving the clusters
     for(let i =0; i<matrix.length; i++){
         for(let j=0; j<matrix[0].length; j++){
@@ -64,8 +64,6 @@ async function kMeans(K, numChannel){
     const convert = require("./matrixToImage");
     const { createCanvas, Image, getImageData} = require('canvas');
 
-    
-
     const img = new Image();
     img.src = "../input/image.jpg";
     var canvas = createCanvas(img.width, img.height);
@@ -88,14 +86,13 @@ async function kMeans(K, numChannel){
         }
     }
 
-
     var rMatrix  = arrayToMatrix(red, width, height);
     var gMatrix  = arrayToMatrix(green, width, height);
     var bMatrix  = arrayToMatrix(blue, width, height);
 
     var matrices = [rMatrix, gMatrix, bMatrix];
     for(var i =0; i<numChannel ; i++)
-        changeToClosest(matrices[i]);
+        changeToClosest(matrices[i], K);
     
     const path = "../output/kMeans.jpg";
     convert.toImage(rMatrix, gMatrix, bMatrix, path);
