@@ -19,5 +19,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandeep-mahra/Image-Compression.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mandeep-mahra/Image-Compression/issues"
+  },
+  "homepage": "https://github.com/mandeep-mahra/Image-Compression#readme"
 }
