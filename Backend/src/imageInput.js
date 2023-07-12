@@ -44,6 +44,6 @@ app.get('/', (req, res) => {
 });
 
 app.listen(5000, ()=>{
-    console.log("listning to port 5000");
+    console.log("listening to port 5000");
 });
 

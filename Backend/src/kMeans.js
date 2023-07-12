@@ -137,6 +137,7 @@ async function kMeans(K, numChannel){
     var bMatrix  = arrayToMatrix(blue, width, height);
 
     var matrices = [rMatrix, gMatrix, bMatrix];
+    
     for(var i =0; i<numChannel ; i++)
         changeToClosest(matrices[i], K);
     
